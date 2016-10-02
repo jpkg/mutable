@@ -2,7 +2,7 @@ package jpkg.mutable;
 
 import java.io.Serializable;
 
-public class MutableInteger implements Serializable, Comparable<MutableInteger> {
+public class MutableInteger extends Number implements Serializable, Comparable<MutableInteger>, MutablePrimitive {
 
 	private static final long serialVersionUID = -2285917765136376454L;
 	
@@ -79,5 +79,25 @@ public class MutableInteger implements Serializable, Comparable<MutableInteger> 
 	@Override
 	public int compareTo(MutableInteger arg0) {
 		return Integer.compare(this.val, arg0.val);
+	}
+
+	@Override
+	public double doubleValue() {
+		return (double) val;
+	}
+
+	@Override
+	public float floatValue() {
+		return (float) val;
+	}
+
+	@Override
+	public int intValue() {
+		return val;
+	}
+
+	@Override
+	public long longValue() {
+		return (long) val;
 	}
 }

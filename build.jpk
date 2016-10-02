@@ -1,0 +1,3 @@
+dependencies=test-manager
+output-jar=bin/mutable-${branch}.jar
+maintype-test=jpkg.mutable.MutablesTest
